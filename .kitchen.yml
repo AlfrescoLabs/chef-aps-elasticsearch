@@ -1,0 +1,24 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+  always_update_cookbooks: true
+  require_chef_omnibus: 12.19.36
+
+verifier:
+  name: inspec
+
+platforms:
+  # - name: ubuntu-16.04
+  - name: centos-7.2
+
+suites:
+  - name: 
+    run_list:
+      - recipe[]
+    verifier:
+      inspec_tests:
+        - name: chef-aps-inspec-mysql
+          git: https://github.com/Alfresco/chef-aps-elasticsearch
