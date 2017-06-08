@@ -1,0 +1,13 @@
+current directory: /Users/abdulmohammed/cookbooks/chef-aps-elasticsearch/vendor/cache/ruby/2.3.0/gems/json-2.1.0/ext/json
+/opt/chefdk/embedded/bin/ruby -r ./siteconf20170608-44227-16ik81p.rb extconf.rb
+creating Makefile
+
+current directory: /Users/abdulmohammed/cookbooks/chef-aps-elasticsearch/vendor/cache/ruby/2.3.0/gems/json-2.1.0/ext/json
+make "DESTDIR=" clean
+
+current directory: /Users/abdulmohammed/cookbooks/chef-aps-elasticsearch/vendor/cache/ruby/2.3.0/gems/json-2.1.0/ext/json
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+current directory: /Users/abdulmohammed/cookbooks/chef-aps-elasticsearch/vendor/cache/ruby/2.3.0/gems/json-2.1.0/ext/json
+make "DESTDIR=" install

@@ -1,0 +1,40 @@
+sudo: required
+branches:
+  only:
+    - master
+language: ruby
+cache: bundler
+dist: trusty
+services:
+  - docker
+bundler_args: "--without integration guard tools"
+before_install:
+  - gem install bundler
+  - gem --version
+matrix:
+  include:
+  - rvm: 2.1.9
+  - rvm: 2.2.5
+  - rvm: 2.3.1
+    bundler_args: "--without guard tools"
+    script: bundle exec rake $SUITE
+    env: SUITE="test:integration" OS='default profile contains_inspec'
+  - rvm: 2.3.1
+    bundler_args: "--without guard tools"
+    script: bundle exec rake $SUITE
+    env: SUITE="test:integration" OS='backwards'
+  - rvm: 2.3.1
+    bundler_args: "--without guard tools"
+    script: bundle exec rake $SUITE
+    env: SUITE="test:integration" OS='duplicates'
+  - rvm: 2.3.1
+    bundler_args: "--without guard tools"
+    script: bundle exec rake $SUITE
+    env: SUITE="test:integration" OS='supermarket'
+  - rvm: 2.3.1
+    bundler_args: "--without guard tools"
+    script: bundle exec rake $SUITE
+    env: SUITE="test:integration" OS='attributes-inline attributes-file'
+  - rvm: ruby-head
+  allow_failures:
+  - rvm: ruby-head

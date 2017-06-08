@@ -1,0 +1,22 @@
+sudo: required
+dist: trusty
+language: ruby
+
+rvm:
+- "2.1.9"
+- "2.2.5"
+- "2.3.1"
+
+services:
+- docker
+
+cache:
+  bundler: true
+  directories:
+  - /var/lib/docker
+
+script:
+- bundle exec docker version
+- bundle exec kitchen --version
+- bundle exec rake spec
+- bundle exec kitchen test -d always

@@ -1,0 +1,20 @@
+sudo: false
+
+rvm:
+  - 2.3.0
+  - 2.2
+  - 2.1
+  - 2.0.0
+  - jruby-9.0.5.0
+
+# whitelist
+branches:
+  only:
+    - master
+
+notifications:
+  email:
+    - cukes-devs@googlegroups.com
+  webhooks:
+    urls: # gitter
+      - https://webhooks.gitter.im/e/dc010332f9d40fcc21c4

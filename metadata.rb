@@ -9,3 +9,5 @@ source_url 'https://github.com/Alfresco/chef-aps-elasticsearch'
 version          '0.1.0'
 
 # Resolved by Berkshelf, not present in Supermarket or forked
+depends 'java', '>= 1.31.0'
+depends 'elasticsearch', '~> 2.0.0'

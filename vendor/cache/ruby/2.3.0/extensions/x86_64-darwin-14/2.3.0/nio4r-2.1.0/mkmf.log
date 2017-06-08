@@ -1,0 +1,115 @@
+have_header: checking for unistd.h... -------------------- yes
+
+"clang -o conftest -I/opt/chefdk/embedded/include/ruby-2.3.0/x86_64-darwin14 -I/opt/chefdk/embedded/include/ruby-2.3.0/ruby/backward -I/opt/chefdk/embedded/include/ruby-2.3.0 -I. -I/opt/chefdk/embedded/include -O2 -I/opt/chefdk/embedded/include/ncurses -arch x86_64 -m64 -O3 -g -pipe -Qunused-arguments -I/opt/chefdk/embedded/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -I/opt/chefdk/embedded/include -O2 -I/opt/chefdk/embedded/include/ncurses -O3 -g -pipe -Qunused-arguments -fno-common conftest.c  -L. -L/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -L. -L/opt/chefdk/embedded/lib -fstack-protector -L/usr/local/lib -L/opt/chefdk/embedded/lib  -m64   -lruby.2.3.0  -lpthread -ldl -lobjc "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+
+"clang -E -I/opt/chefdk/embedded/include/ruby-2.3.0/x86_64-darwin14 -I/opt/chefdk/embedded/include/ruby-2.3.0/ruby/backward -I/opt/chefdk/embedded/include/ruby-2.3.0 -I. -I/opt/chefdk/embedded/include -O2 -I/opt/chefdk/embedded/include/ncurses -arch x86_64 -m64 -O3 -g -pipe -Qunused-arguments -I/opt/chefdk/embedded/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -I/opt/chefdk/embedded/include -O2 -I/opt/chefdk/embedded/include/ncurses -O3 -g -pipe -Qunused-arguments -fno-common  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <unistd.h>
+/* end */
+
+--------------------
+
+have_header: checking for sys/select.h... -------------------- yes
+
+"clang -E -I/opt/chefdk/embedded/include/ruby-2.3.0/x86_64-darwin14 -I/opt/chefdk/embedded/include/ruby-2.3.0/ruby/backward -I/opt/chefdk/embedded/include/ruby-2.3.0 -I. -I/opt/chefdk/embedded/include -O2 -I/opt/chefdk/embedded/include/ncurses -arch x86_64 -m64 -O3 -g -pipe -Qunused-arguments -I/opt/chefdk/embedded/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -I/opt/chefdk/embedded/include -O2 -I/opt/chefdk/embedded/include/ncurses -O3 -g -pipe -Qunused-arguments -fno-common  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <sys/select.h>
+/* end */
+
+--------------------
+
+have_header: checking for poll.h... -------------------- yes
+
+"clang -E -I/opt/chefdk/embedded/include/ruby-2.3.0/x86_64-darwin14 -I/opt/chefdk/embedded/include/ruby-2.3.0/ruby/backward -I/opt/chefdk/embedded/include/ruby-2.3.0 -I. -I/opt/chefdk/embedded/include -O2 -I/opt/chefdk/embedded/include/ncurses -arch x86_64 -m64 -O3 -g -pipe -Qunused-arguments -I/opt/chefdk/embedded/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -I/opt/chefdk/embedded/include -O2 -I/opt/chefdk/embedded/include/ncurses -O3 -g -pipe -Qunused-arguments -fno-common  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <poll.h>
+/* end */
+
+--------------------
+
+have_header: checking for sys/epoll.h... -------------------- no
+
+"clang -E -I/opt/chefdk/embedded/include/ruby-2.3.0/x86_64-darwin14 -I/opt/chefdk/embedded/include/ruby-2.3.0/ruby/backward -I/opt/chefdk/embedded/include/ruby-2.3.0 -I. -I/opt/chefdk/embedded/include -O2 -I/opt/chefdk/embedded/include/ncurses -arch x86_64 -m64 -O3 -g -pipe -Qunused-arguments -I/opt/chefdk/embedded/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -I/opt/chefdk/embedded/include -O2 -I/opt/chefdk/embedded/include/ncurses -O3 -g -pipe -Qunused-arguments -fno-common  conftest.c -o conftest.i"
+conftest.c:3:10: fatal error: 'sys/epoll.h' file not found
+#include <sys/epoll.h>
+         ^
+1 error generated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <sys/epoll.h>
+/* end */
+
+--------------------
+
+have_header: checking for sys/event.h... -------------------- yes
+
+"clang -E -I/opt/chefdk/embedded/include/ruby-2.3.0/x86_64-darwin14 -I/opt/chefdk/embedded/include/ruby-2.3.0/ruby/backward -I/opt/chefdk/embedded/include/ruby-2.3.0 -I. -I/opt/chefdk/embedded/include -O2 -I/opt/chefdk/embedded/include/ncurses -arch x86_64 -m64 -O3 -g -pipe -Qunused-arguments -I/opt/chefdk/embedded/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -I/opt/chefdk/embedded/include -O2 -I/opt/chefdk/embedded/include/ncurses -O3 -g -pipe -Qunused-arguments -fno-common  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <sys/event.h>
+/* end */
+
+--------------------
+
+have_header: checking for sys/queue.h... -------------------- yes
+
+"clang -E -I/opt/chefdk/embedded/include/ruby-2.3.0/x86_64-darwin14 -I/opt/chefdk/embedded/include/ruby-2.3.0/ruby/backward -I/opt/chefdk/embedded/include/ruby-2.3.0 -I. -I/opt/chefdk/embedded/include -O2 -I/opt/chefdk/embedded/include/ncurses -arch x86_64 -m64 -O3 -g -pipe -Qunused-arguments -I/opt/chefdk/embedded/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -I/opt/chefdk/embedded/include -O2 -I/opt/chefdk/embedded/include/ncurses -O3 -g -pipe -Qunused-arguments -fno-common  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <sys/queue.h>
+/* end */
+
+--------------------
+
+have_header: checking for port.h... -------------------- no
+
+"clang -E -I/opt/chefdk/embedded/include/ruby-2.3.0/x86_64-darwin14 -I/opt/chefdk/embedded/include/ruby-2.3.0/ruby/backward -I/opt/chefdk/embedded/include/ruby-2.3.0 -I. -I/opt/chefdk/embedded/include -O2 -I/opt/chefdk/embedded/include/ncurses -arch x86_64 -m64 -O3 -g -pipe -Qunused-arguments -I/opt/chefdk/embedded/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -I/opt/chefdk/embedded/include -O2 -I/opt/chefdk/embedded/include/ncurses -O3 -g -pipe -Qunused-arguments -fno-common  conftest.c -o conftest.i"
+conftest.c:3:10: fatal error: 'port.h' file not found
+#include <port.h>
+         ^
+1 error generated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <port.h>
+/* end */
+
+--------------------
+
+have_header: checking for sys/resource.h... -------------------- yes
+
+"clang -E -I/opt/chefdk/embedded/include/ruby-2.3.0/x86_64-darwin14 -I/opt/chefdk/embedded/include/ruby-2.3.0/ruby/backward -I/opt/chefdk/embedded/include/ruby-2.3.0 -I. -I/opt/chefdk/embedded/include -O2 -I/opt/chefdk/embedded/include/ncurses -arch x86_64 -m64 -O3 -g -pipe -Qunused-arguments -I/opt/chefdk/embedded/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -I/opt/chefdk/embedded/include -O2 -I/opt/chefdk/embedded/include/ncurses -O3 -g -pipe -Qunused-arguments -fno-common  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <sys/resource.h>
+/* end */
+
+--------------------
+

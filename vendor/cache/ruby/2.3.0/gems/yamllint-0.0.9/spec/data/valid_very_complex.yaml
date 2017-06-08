@@ -1,0 +1,22 @@
+---
+foo: bar
+my_array:
+  - 1
+  - 2
+  - 3
+my_hash:
+  foo1: bar1
+  foo2: bar2
+  foo3: bar3
+  foo4:
+  - bar
+  - bar2:
+    - biz
+    - baz
+  foo5:
+  - bar
+  - - foo
+  - bar2:
+    - biz
+    - baz: 1
+      buzz: 2

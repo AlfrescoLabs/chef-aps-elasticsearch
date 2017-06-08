@@ -1,0 +1,19 @@
+current directory: /Users/abdulmohammed/cookbooks/chef-aps-elasticsearch/vendor/cache/ruby/2.3.0/gems/libyajl2-1.2.0/ext/libyajl2
+/opt/chefdk/embedded/bin/ruby -r ./siteconf20170608-44227-jrow5h.rb extconf.rb
+creating Makefile
+/Users/abdulmohammed/cookbooks/chef-aps-elasticsearch/vendor/cache/ruby/2.3.0/gems/libyajl2-1.2.0/ext/libyajl2
+
+current directory: /Users/abdulmohammed/cookbooks/chef-aps-elasticsearch/vendor/cache/ruby/2.3.0/gems/libyajl2-1.2.0/ext/libyajl2
+make "DESTDIR=" clean
+make: *** No rule to make target `clean'.  Stop.
+
+current directory: /Users/abdulmohammed/cookbooks/chef-aps-elasticsearch/vendor/cache/ruby/2.3.0/gems/libyajl2-1.2.0/ext/libyajl2
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+current directory: /Users/abdulmohammed/cookbooks/chef-aps-elasticsearch/vendor/cache/ruby/2.3.0/gems/libyajl2-1.2.0/ext/libyajl2
+make "DESTDIR=" install
+mkdir -p /Users/abdulmohammed/cookbooks/chef-aps-elasticsearch/vendor/cache/ruby/2.3.0/gems/libyajl2-1.2.0/lib/libyajl2/vendored-libyajl2/lib
+cp libyajl.bundle /Users/abdulmohammed/cookbooks/chef-aps-elasticsearch/vendor/cache/ruby/2.3.0/gems/libyajl2-1.2.0/lib/libyajl2/vendored-libyajl2/lib/libyajl.bundle
+mkdir -p /Users/abdulmohammed/cookbooks/chef-aps-elasticsearch/vendor/cache/ruby/2.3.0/gems/libyajl2-1.2.0/lib/libyajl2/vendored-libyajl2/include/yajl
+cp yajl/*.h /Users/abdulmohammed/cookbooks/chef-aps-elasticsearch/vendor/cache/ruby/2.3.0/gems/libyajl2-1.2.0/lib/libyajl2/vendored-libyajl2/include/yajl

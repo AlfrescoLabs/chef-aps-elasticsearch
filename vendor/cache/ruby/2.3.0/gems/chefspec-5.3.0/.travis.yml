@@ -1,0 +1,40 @@
+language: ruby
+cache: bundler
+sudo: false
+
+before_install:
+  - gem install bundler
+
+rvm:
+  - 2.1.9
+  - 2.2.5
+
+branches:
+  only:
+    - master
+
+bundler_args: --jobs 7 --retry 3
+
+gemfile: gemfiles/chefspec.gemfile
+
+env:
+  - CHEF_VERSION=master
+  - CHEF_VERSION=12.13.37
+  - CHEF_VERSION=12.12.15
+  - CHEF_VERSION=12.11.18
+  - CHEF_VERSION=12.10.24
+  - CHEF_VERSION=12.9.41
+  - CHEF_VERSION=12.8.1
+  - CHEF_VERSION=12.7.2
+  - CHEF_VERSION=12.6.0
+  - CHEF_VERSION=12.5.1
+  - CHEF_VERSION=12.4.3
+  - CHEF_VERSION=12.3.0
+  - CHEF_VERSION=12.2.1
+  - CHEF_VERSION=12.1.2
+  - CHEF_VERSION=12.0.3
+
+matrix:
+  fast_finish: true
+  allow_failures:
+    - env: CHEF_VERSION=master

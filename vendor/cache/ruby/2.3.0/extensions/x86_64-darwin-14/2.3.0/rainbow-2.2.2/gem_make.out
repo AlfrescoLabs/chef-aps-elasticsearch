@@ -1,0 +1,5 @@
+current directory: /Users/abdulmohammed/cookbooks/chef-aps-elasticsearch/vendor/cache/ruby/2.3.0/gems/rainbow-2.2.2/ext
+/opt/chefdk/embedded/bin/ruby mkrf_conf.rb
+
+current directory: /Users/abdulmohammed/cookbooks/chef-aps-elasticsearch/vendor/cache/ruby/2.3.0/gems/rainbow-2.2.2/ext
+/opt/chefdk/embedded/bin/ruby -rubygems /Users/abdulmohammed/cookbooks/chef-aps-elasticsearch/vendor/cache/ruby/2.3.0/gems/rake-12.0.0/exe/rake RUBYARCHDIR=/Users/abdulmohammed/cookbooks/chef-aps-elasticsearch/vendor/cache/ruby/2.3.0/extensions/x86_64-darwin-14/2.3.0/rainbow-2.2.2 RUBYLIBDIR=/Users/abdulmohammed/cookbooks/chef-aps-elasticsearch/vendor/cache/ruby/2.3.0/extensions/x86_64-darwin-14/2.3.0/rainbow-2.2.2
