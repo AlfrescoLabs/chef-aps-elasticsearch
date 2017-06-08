@@ -1,2 +1,0 @@
-action :run do
-end

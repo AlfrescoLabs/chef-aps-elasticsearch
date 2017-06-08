@@ -1,8 +1,0 @@
-/Gemfile.lock
-/.acceptance_data/
-
-# Terraform
-*.tfstate
-*.tfstate.backup
-*_override.tf
-

@@ -1,2 +1,0 @@
-action(:install) {}
-action(:remove) {}

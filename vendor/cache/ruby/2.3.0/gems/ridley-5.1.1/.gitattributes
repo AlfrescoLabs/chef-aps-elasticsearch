@@ -1,5 +1,0 @@
-* text=auto
-*.h text eol=lf
-*.erb text eol=lf
-*.txt text eol=lf
-*.json text eol=lf

@@ -1,9 +1,0 @@
-current directory: /Users/abdulmohammed/cookbooks/chef-aps-elasticsearch/vendor/cache/ruby/2.3.0/gems/rainbow-2.2.2/ext
-/Users/abdulmohammed/.rbenv/versions/2.3.1/bin/ruby mkrf_conf.rb
-Ignoring ffi-yajl-2.3.0 because its extensions are not built.  Try: gem pristine ffi-yajl --version 2.3.0
-Ignoring nokogiri-1.8.0 because its extensions are not built.  Try: gem pristine nokogiri --version 1.8.0
-
-current directory: /Users/abdulmohammed/cookbooks/chef-aps-elasticsearch/vendor/cache/ruby/2.3.0/gems/rainbow-2.2.2/ext
-/Users/abdulmohammed/.rbenv/versions/2.3.1/bin/ruby -rubygems /Users/abdulmohammed/cookbooks/chef-aps-elasticsearch/vendor/cache/ruby/2.3.0/gems/rake-12.0.0/exe/rake RUBYARCHDIR=/Users/abdulmohammed/cookbooks/chef-aps-elasticsearch/vendor/cache/ruby/2.3.0/extensions/x86_64-darwin-16/2.3.0-static/rainbow-2.2.2 RUBYLIBDIR=/Users/abdulmohammed/cookbooks/chef-aps-elasticsearch/vendor/cache/ruby/2.3.0/extensions/x86_64-darwin-16/2.3.0-static/rainbow-2.2.2
-Ignoring ffi-yajl-2.3.0 because its extensions are not built.  Try: gem pristine ffi-yajl --version 2.3.0
-Ignoring nokogiri-1.8.0 because its extensions are not built.  Try: gem pristine nokogiri --version 1.8.0
