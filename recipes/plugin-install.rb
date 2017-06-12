@@ -5,11 +5,11 @@
 #   plugin_name 'elasticsearch/cloud-aws/2.4.5'
 #   url 'https://download.elastic.co/elasticsearch/release/org/elasticsearch/plugin/cloud-aws/2.4.5/cloud-aws-2.4.5.zip'
 #   action :install
-#   only_if { node['aps-es']['plugin']['cloud-aws'] }
+#   only_if { node['aps-es']['ec2_discovery_enabled'] }
 # end
 
 execute 'cloud-aws-plugin' do
-  command "#{node['aps-es']['path_bin']}/plugin --install #{node['aps-es']['plugin']['cloud-aws_name']} --url #{node['aps-es']['plugin']['cloud-aws_url']} --verbose"
-  only_if { node['aps-es']['plugin']['cloud-aws'] }
+  command "#{node['aps-es']['path_bin']}/plugin --install #{node['aps-es']['plugin']['name']} --url #{node['aps-es']['plugin']['url']} --verbose"
+  only_if { node['aps-es']['ec2_discovery_enabled'] }
   not_if "#{node['aps-es']['path_bin']}/plugin --list | grep 'cloud-aws' 2>&1 >/dev/null"
 end

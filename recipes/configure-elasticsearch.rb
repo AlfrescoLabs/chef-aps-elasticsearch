@@ -15,19 +15,16 @@ elasticsearch_configure 'elasticsearch' do
     'action.disable_shutdown' => node['aps-es']['disable']['shutdown'],
     'discovery.zen.ping.multicast.enabled' => (node['aps-es']['multicast_enabled'] if node['aps-es']['multicast_enabled']),
     'discovery.zen.ping.unicast.hosts' => (node['aps-es']['unicast_nodes'].to_s if node['aps-es']['unicast_enabled']),
-    if node['aps-es']['ec2_discovery_enabled']
-      'plugin.mandatory' => 'cloud-aws',
-      'discovery.type' => 'ec2',
-      'discovery.ec2.groups' => node['aps-es']['ec2_security_groups'],
-      'discovery.ec2.host_type' => node['aps-es']['ec2_host_type'],
-      'discovery.ec2.ping_timeout' => node['aps-es']['ec2_ping_timeout'],
-      'discovery.ec2.availability_zones' => node['aps-es']['ec2_az'],
-    end
-    if node['aps-es']['ec2_discovery_enabled']
-      'network.host' => '_ec2:privateIpv4_',
-    else
-      'network.host' => node['aps-es']['network_host'],
-    end
+    'cloud.aws.access_key' => (node['aps-es']['ec2']['access_key'] if node['aps-es']['ec2_discovery_enabled']),
+    'cloud.aws.secret_key' => (node['aps-es']['ec2']['secret_key'] if node['aps-es']['ec2_discovery_enabled']),
+    'cloud.aws.region' => (node['aps-es']['ec2']['region'] if node['aps-es']['ec2_discovery_enabled']),
+    'plugin.mandatory' => ('cloud-aws' if node['aps-es']['ec2_discovery_enabled']),
+    'discovery.type' => ('ec2' if node['aps-es']['ec2_discovery_enabled']),
+    'discovery.ec2.groups' => (node['aps-es']['ec2']['security_groups'] if node['aps-es']['ec2_discovery_enabled']),
+    'discovery.ec2.host_type' => (node['aps-es']['ec2']['host_type'] if node['aps-es']['ec2_discovery_enabled']),
+    'discovery.ec2.ping_timeout' => (node['aps-es']['ec2']['ping_timeout'] if node['aps-es']['ec2_discovery_enabled']),
+    'discovery.ec2.availability_zones' => (node['aps-es']['ec2']['az'] if node['aps-es']['ec2_discovery_enabled']),
+    'network.host' => (node['aps-es']['ec2_discovery_enabled'] ? '_ec2:privateIpv4_' : node['aps-es']['network_host']),
     'discovery.zen.minimum_master_nodes' => node['aps-es']['minimum_master_nodes'],
     'discovery.zen.ping.timeout' => node['aps-es']['ping_timeout'],
     'indices.recovery.max_bytes_per_sec' => node['aps-es']['max_bytes_per_sec'],

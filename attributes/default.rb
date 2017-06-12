@@ -1,7 +1,9 @@
+url_prefix = 'https://download.elastic.co/elasticsearch'
+
 # Main ElasticSearch information
 default['aps-es']['es_version'] = '1.7.3'
 default['aps-es']['tarball_path'] = '/usr/local'
-default['aps-es']['download_url'] = "https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-#{node['aps-es']['es_version']}.tar.gz"
+default['aps-es']['download_url'] = "#{url_prefix}/elasticsearch/elasticsearch-#{node['aps-es']['es_version']}.tar.gz"
 default['aps-es']['sha256'] = 'af517611493374cfb2daa8897ae17e63e2efea4d0377d316baa351c1776a2bca'
 
 # Cluster configuration
@@ -39,10 +41,13 @@ default['aps-es']['ec2_discovery_enabled'] = false
 default['aps-es']['ping_timeout'] = '5s'
 
 # EC2 parameters if ec2_discovery_enabled
-default['aps-es']['ec2_security_groups'] = []
-default['aps-es']['ec2_az'] = ''
-default['aps-es']['ec2_host_type'] = 'private_ip'
-default['aps-es']['ec2_ping_timeout'] = '30s'
+default['aps-es']['ec2']['access_key'] = ''
+default['aps-es']['ec2']['secret_key'] = ''
+default['aps-es']['ec2']['region'] = ''
+default['aps-es']['ec2']['security_groups'] = []
+default['aps-es']['ec2']['az'] = ''
+default['aps-es']['ec2']['host_type'] = 'private_ip'
+default['aps-es']['ec2']['ping_timeout'] = '10s'
 
 # By default unicast node communicate each other on TCP 9300 so "host1" or "host1:9300" is OK
 # If a cluster node is listening other other than 9300 then "host1:<port_no>" or ex: "host1:9301"
@@ -66,7 +71,6 @@ default['aps-es']['disk_watermark_low'] = '85%'
 default['aps-es']['disk_watermark_high'] = '95%'
 default['aps-es']['cluster_info_update_internal'] = '30s'
 
-# ElasticSearch plugins
-default['aps-es']['plugin']['cloud-aws'] = false
-default['aps-es']['plugin']['cloud-aws_name'] = 'elasticsearch/cloud-aws/2.4.5'
-default['aps-es']['plugin']['cloud-aws_url'] = 'https://download.elastic.co/elasticsearch/release/org/elasticsearch/plugin/cloud-aws/2.4.5/cloud-aws-2.4.5.zip'
+# ElasticSearch cloud-aws plugin
+default['aps-es']['plugin']['name'] = 'elasticsearch/cloud-aws/2.4.5'
+default['aps-es']['plugin']['url'] = "#{url_prefix}/release/org/elasticsearch/plugin/cloud-aws/2.4.5/cloud-aws-2.4.5.zip"
