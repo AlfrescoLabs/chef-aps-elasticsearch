@@ -7,4 +7,5 @@
 include_recipe 'java::default'
 include_recipe 'aps-elasticsearch::install-elasticsearch'
 include_recipe 'aps-elasticsearch::configure-elasticsearch'
-include_recipe 'aps-elasticsearch::start-elasticsearch'
+include_recipe 'aps-elasticsearch::plugin-install'
+include_recipe 'aps-elasticsearch::restart-elasticsearch'

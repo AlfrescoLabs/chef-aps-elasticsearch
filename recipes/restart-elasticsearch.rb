@@ -1,6 +1,3 @@
-# Start ES service daemon
-elasticsearch_service 'elasticsearch'
-
 # ES service library is not very reliable
 service 'elasticsearch' do
   action :restart

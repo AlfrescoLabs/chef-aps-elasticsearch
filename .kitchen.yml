@@ -21,3 +21,18 @@ suites:
       inspec_tests:
         - name: ES-checks
           path: test/integration/elasticsearch/inspec
+    attributes: {
+      "name": "chef-aps-elasticsearch",
+      "hostname": "chef-aps-elasticsearch-test",
+      "aps-es" : {
+        "unicast_enabled" : false,
+        "multicast_enabled" : false,
+        "ec2_discovery_enabled" : true
+        "number_of_shards" : '1',
+        "number_of_replicas" : '0',
+        "plugin" :
+          {
+            "cloud-aws" : true
+          }
+        },
+     }
