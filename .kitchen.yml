@@ -30,10 +30,5 @@ suites:
         "ec2_discovery_enabled" : true,
         "number_of_shards" : '1',
         "number_of_replicas" : '0',
-        "plugin" : {
-          "cloud-aws" : {
-            "enabled" : true
-          },
-        },
       },
     }
