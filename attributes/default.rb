@@ -49,6 +49,9 @@ default['aps-es']['ec2']['az'] = ''
 default['aps-es']['ec2']['host_type'] = 'private_ip'
 default['aps-es']['ec2']['ping_timeout'] = '10s'
 
+# ElasticSearch cloud-aws plugin when ec2_discovery_enabled
+default['aps-es']['plugin']['name'] = 'elasticsearch/elasticsearch-cloud-aws/2.7.1'
+
 # By default unicast node communicate each other on TCP 9300 so "host1" or "host1:9300" is OK
 # If a cluster node is listening other other than 9300 then "host1:<port_no>" or ex: "host1:9301"
 default['aps-es']['unicast_nodes'] = ["#{node['aps-es']['network_host']}:#{node['aps-es']['transport_port']}"]
@@ -70,7 +73,3 @@ default['aps-es']['max_bytes_per_sec'] = '100mb'
 default['aps-es']['disk_watermark_low'] = '85%'
 default['aps-es']['disk_watermark_high'] = '95%'
 default['aps-es']['cluster_info_update_internal'] = '30s'
-
-# ElasticSearch cloud-aws plugin
-default['aps-es']['plugin']['name'] = 'elasticsearch/cloud-aws/2.4.5'
-default['aps-es']['plugin']['url'] = "#{url_prefix}/release/org/elasticsearch/plugin/cloud-aws/2.4.5/cloud-aws-2.4.5.zip"
