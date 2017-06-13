@@ -43,5 +43,17 @@ elasticsearch_configure 'elasticsearch' do
   allocated_memory node['aps-es']['memory']
 end
 
+# logrotate eslogs
+template '/etc/logrotate.d/eslogs_retention' do
+  source 'eslogs_logrotate.erb'
+  owner 'root'
+  group 'root'
+  mode '0644'
+  variables({
+    eslogs_path: node['aps-es']['path_logs'],
+    eslogs_retention: node['aps-es']['eslogs_retention']
+  })
+end
+
 # Start ES service daemon
 elasticsearch_service 'elasticsearch'

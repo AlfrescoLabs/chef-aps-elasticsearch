@@ -73,3 +73,6 @@ default['aps-es']['max_bytes_per_sec'] = '100mb'
 default['aps-es']['disk_watermark_low'] = '85%'
 default['aps-es']['disk_watermark_high'] = '95%'
 default['aps-es']['cluster_info_update_internal'] = '30s'
+
+# Retention period for logrotate to keep ES logs
+default['aps-es']['eslogs_retention'] = '3'
