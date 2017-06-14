@@ -25,9 +25,9 @@ suites:
       "name": "chef-aps-elasticsearch",
       "hostname": "chef-aps-elasticsearch-test",
       "aps-es" : {
-        "unicast_enabled" : false,
+        "unicast_enabled" : true,
         "multicast_enabled" : false,
-        "ec2_discovery_enabled" : true,
+        "ec2_discovery_enabled" : false,
         "number_of_shards" : '1',
         "number_of_replicas" : '0',
       },
