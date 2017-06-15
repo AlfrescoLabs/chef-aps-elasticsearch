@@ -1,0 +1,14 @@
+---
+driver:
+  name: docker
+  use_sudo: false
+
+platforms:
+  - name: centos-7
+    driver_config:
+      image: centos:7.2.1511
+      platform: centos
+      run_command: /usr/sbin/init
+      privileged: true
+      forward:
+      - 9200:9200
