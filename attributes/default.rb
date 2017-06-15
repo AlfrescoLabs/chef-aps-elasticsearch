@@ -44,8 +44,8 @@ default['aps-es']['ping_timeout'] = '5s'
 default['aps-es']['ec2']['access_key'] = ''
 default['aps-es']['ec2']['secret_key'] = ''
 default['aps-es']['ec2']['region'] = ''
-default['aps-es']['ec2']['security_groups'] = []
-default['aps-es']['ec2']['az'] = ''
+default['aps-es']['ec2']['security_groups'] = ['']
+default['aps-es']['ec2']['az'] = ['']
 default['aps-es']['ec2']['host_type'] = 'private_ip'
 default['aps-es']['ec2']['ping_timeout'] = '10s'
 
