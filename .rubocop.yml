@@ -15,4 +15,4 @@ Lint/ParenthesesAsGroupedExpression:
   Enabled: false
 
 Style/BracesAroundHashParameters:
-  EnforcedStyle: false
+  EnforcedStyle: context_dependent

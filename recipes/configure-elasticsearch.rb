@@ -51,7 +51,7 @@ template '/etc/logrotate.d/eslogs_retention' do
   owner 'root'
   group 'root'
   mode '0644'
-  variables(
+  variables (
     {
       eslogs_path: node['aps-es']['path_logs'],
       eslogs_retention: node['aps-es']['eslogs_retention'],
