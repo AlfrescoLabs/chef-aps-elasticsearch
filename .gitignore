@@ -15,5 +15,6 @@ bin/*
 
 .kitchen/
 .kitchen.docker.yml
+.ruby-version
 
 coverage/

@@ -18,7 +18,4 @@ before_script: sudo iptables -L DOCKER || sudo iptables -N DOCKER
 script:
   - chef exec rake default
   # Run test-kitchen with docker driver, for example:
-  - chef exec bundle exec rake "integration:docker[$SUITE]"
-  - echo "Plese wait for 20s to make ES service up and running"
-  - sleep 20
-  - chef exec bundle exec rake "integration:docker[test]"
+  - chef exec bundle exec rake "integration:docker[$SUITE, test]"
