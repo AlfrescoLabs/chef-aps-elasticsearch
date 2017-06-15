@@ -10,5 +10,7 @@ platforms:
       platform: centos
       run_command: /usr/sbin/init
       privileged: true
+      provision_command:
+        - yum -y install initscripts
       forward:
       - 9200:9200
