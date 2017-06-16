@@ -11,14 +11,24 @@ verifier:
   name: inspec
 
 platforms:
-  # - name: ubuntu-16.04
   - name: centos-7.2
 
 suites:
-  - name: 
+  - name: elasticsearch
     run_list:
-      - recipe[]
+      - recipe[aps-elasticsearch::default]
     verifier:
       inspec_tests:
-        - name: chef-aps-inspec-mysql
-          git: https://github.com/Alfresco/chef-aps-elasticsearch
+        - name: ES-checks
+          path: test/integration/elasticsearch/inspec
+    attributes: {
+      "name": "chef-aps-elasticsearch",
+      "hostname": "chef-aps-elasticsearch-test",
+      "aps-es" : {
+        "unicast_enabled" : false,
+        "multicast_enabled" : true,
+        "ec2_discovery_enabled" : false,
+        "number_of_shards" : '1',
+        "number_of_replicas" : '0',
+      },
+    }
