@@ -29,7 +29,7 @@ default['aps-es']['data_node'] = true
 default['aps-es']['number_of_shards'] = '5'
 default['aps-es']['number_of_replicas'] = '1'
 
-# Networking
+# Networking & HTTP
 default['aps-es']['http_port'] = '9200'
 default['aps-es']['transport_port'] = '9300'
 default['aps-es']['network_host'] = '0.0.0.0'
