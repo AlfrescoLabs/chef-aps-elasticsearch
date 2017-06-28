@@ -25,6 +25,8 @@ elasticsearch_configure 'elasticsearch' do
       'discovery.ec2.host_type' => (node['aps-es']['ec2']['host_type'] if node['aps-es']['ec2_discovery_enabled']),
       'discovery.ec2.ping_timeout' => (node['aps-es']['ec2']['ping_timeout'] if node['aps-es']['ec2_discovery_enabled']),
       'discovery.ec2.availability_zones' => (node['aps-es']['ec2']['az'].to_s if node['aps-es']['ec2_discovery_enabled']),
+      'repositories.s3.bucket' => (node['aps-es']['s3']['bucket'] if node['aps-es']['ec2_discovery_enabled']),
+      'repositories.s3.region' => (node['aps-es']['s3']['region'] if node['aps-es']['ec2_discovery_enabled']),
       'network.host' => (node['aps-es']['ec2_discovery_enabled'] ? '_ec2:privateIpv4_' : node['aps-es']['network_host']),
       'discovery.zen.minimum_master_nodes' => node['aps-es']['minimum_master_nodes'],
       'discovery.zen.ping.timeout' => node['aps-es']['ping_timeout'],

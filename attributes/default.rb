@@ -49,6 +49,10 @@ default['aps-es']['ec2']['az'] = ['']
 default['aps-es']['ec2']['host_type'] = 'private_ip'
 default['aps-es']['ec2']['ping_timeout'] = '10s'
 
+# S3 parameters for ElasticSearch indices Snapshots & Restore
+default['aps-es']['s3']['bucket'] = ''
+default['aps-es']['s3']['region'] = ''
+
 # ElasticSearch cloud-aws plugin when ec2_discovery_enabled
 default['aps-es']['plugin']['name'] = 'elasticsearch/elasticsearch-cloud-aws/2.7.1'
 
