@@ -51,6 +51,7 @@ default['aps-es']['ec2']['host_type'] = 'private_ip'
 default['aps-es']['ec2']['ping_timeout'] = '10s'
 
 # S3 parameters for ElasticSearch indices Snapshots & Restore
+# S3 bucket's read/write permissions needs to be granted before hand to the IAM user
 default['aps-es']['s3']['bucket'] = ''
 default['aps-es']['s3']['region'] = ''
 default['aps-es']['s3']['reponame'] = ''
@@ -82,3 +83,5 @@ default['aps-es']['cluster_info_update_internal'] = '30s'
 
 # Retention period for logrotate to keep ES logs
 default['aps-es']['eslogs_retention'] = '3'
+
+default['aps-es']['es_python_version'] = '1.9.0'
