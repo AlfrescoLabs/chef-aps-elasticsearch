@@ -16,3 +16,6 @@ Lint/ParenthesesAsGroupedExpression:
 
 Style/BracesAroundHashParameters:
   EnforcedStyle: context_dependent
+
+Style/RedundantParentheses:
+  Enabled: false

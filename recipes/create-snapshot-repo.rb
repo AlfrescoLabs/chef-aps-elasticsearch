@@ -11,6 +11,7 @@ http_request 'create an s3 repository' do
         },
     }.to_json
   )
+
   headers (
     {
       'Content-Type' => 'application/json',
