@@ -52,8 +52,11 @@ default['aps-es']['ec2']['ping_timeout'] = '10s'
 
 # S3 parameters for ElasticSearch indices Snapshots & Restore
 # S3 bucket's read/write permissions needs to be granted before hand to the IAM user
+# 'base_path' refers to a fancy name inside S3 bucket otherwise all snapshot data be in root of the bucket
+# 'reponame' refers to a fancy name to create/register a snapshot in the specified S3 bucket
 default['aps-es']['s3']['bucket'] = ''
 default['aps-es']['s3']['region'] = ''
+default['aps-es']['s3']['base_path'] = ''
 default['aps-es']['s3']['reponame'] = ''
 
 # ElasticSearch cloud-aws plugin when ec2_discovery_enabled

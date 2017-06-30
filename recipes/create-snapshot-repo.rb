@@ -8,6 +8,7 @@ http_request 'create an s3 repository' do
         {
           bucket: node['aps-es']['s3']['bucket'],
           region: node['aps-es']['s3']['region'],
+          base_path: node['aps-es']['s3']['base_path'],
         },
     }.to_json
   )
