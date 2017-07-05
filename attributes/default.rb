@@ -87,4 +87,5 @@ default['aps-es']['cluster_info_update_internal'] = '30s'
 # Retention period for logrotate to keep ES logs
 default['aps-es']['eslogs_retention'] = '3'
 
-default['aps-es']['es_python_version'] = '1.9.0'
+# Python modules for ElasticSearch
+default['aps-es']['python_modules'] = ['elasticsearch==1.9.0', 'elasticsearch-curator==3.3']

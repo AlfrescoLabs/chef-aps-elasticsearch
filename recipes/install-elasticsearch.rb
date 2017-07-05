@@ -21,6 +21,9 @@ end
 
 # Install ElasticSearch python module
 include_recipe 'python::pip'
-python_pip 'elasticsearch' do
-  version node['aps-es']['es_python_version']
+
+node['aps-es']['python_modules'].each do |pkg|
+  python_pip pkg do
+    action :install
+  end
 end
