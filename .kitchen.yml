@@ -16,8 +16,7 @@ platforms:
 suites:
   - name: elasticsearch
     run_list:
-      - recipe[aps-elasticsearch::install-elasticsearch]
-      # - recipe[aps-elasticsearch::default]
+      - recipe[aps-elasticsearch::default]
     verifier:
       inspec_tests:
         - name: ES-checks
