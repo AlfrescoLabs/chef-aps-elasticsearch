@@ -18,3 +18,12 @@ elasticsearch_install node['aps-es']['cluster_name'] do
 
   action :install
 end
+
+# Install ElasticSearch python module
+include_recipe 'python::pip'
+
+node['aps-es']['python_modules'].each do |pkg|
+  python_pip pkg do
+    action :install
+  end
+end

@@ -14,3 +14,4 @@ supports 'centos', '>= 7.0'
 # Resolved by Berkshelf, not present in Supermarket or forked
 depends 'java', '>= 1.31.0'
 depends 'elasticsearch', '~> 2.0.0'
+depends 'python', '~> 1.4.6'

@@ -32,7 +32,8 @@ default['aps-es']['number_of_replicas'] = '1'
 # Networking & HTTP
 default['aps-es']['http_port'] = '9200'
 default['aps-es']['transport_port'] = '9300'
-default['aps-es']['network_host'] = '0.0.0.0'
+default['aps-es']['network']['bind_host'] = '0.0.0.0'
+default['aps-es']['network']['publish_host'] = '_non_loopback:ipv4_'
 
 # Discovery of cluster: Unicast or multicast or EC2 Discovery ?
 default['aps-es']['multicast_enabled'] = true
@@ -48,6 +49,15 @@ default['aps-es']['ec2']['security_groups'] = ['']
 default['aps-es']['ec2']['az'] = ['']
 default['aps-es']['ec2']['host_type'] = 'private_ip'
 default['aps-es']['ec2']['ping_timeout'] = '10s'
+
+# S3 parameters for ElasticSearch indices Snapshots & Restore
+# S3 bucket's read/write permissions needs to be granted before hand to the IAM user
+# 'base_path' refers to a fancy name inside S3 bucket otherwise all snapshot data be in root of the bucket
+# 'reponame' refers to a fancy name to create/register a snapshot in the specified S3 bucket
+default['aps-es']['s3']['bucket'] = ''
+default['aps-es']['s3']['region'] = ''
+default['aps-es']['s3']['base_path'] = ''
+default['aps-es']['s3']['reponame'] = ''
 
 # ElasticSearch cloud-aws plugin when ec2_discovery_enabled
 default['aps-es']['plugin']['name'] = 'elasticsearch/elasticsearch-cloud-aws/2.7.1'
@@ -76,3 +86,6 @@ default['aps-es']['cluster_info_update_internal'] = '30s'
 
 # Retention period for logrotate to keep ES logs
 default['aps-es']['eslogs_retention'] = '3'
+
+# Python modules for ElasticSearch
+default['aps-es']['python_modules'] = ['elasticsearch==1.9.0', 'elasticsearch-curator==3.3']
