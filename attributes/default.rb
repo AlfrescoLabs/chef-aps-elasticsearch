@@ -32,7 +32,8 @@ default['aps-es']['number_of_replicas'] = '1'
 # Networking & HTTP
 default['aps-es']['http_port'] = '9200'
 default['aps-es']['transport_port'] = '9300'
-default['aps-es']['network']['bind_host'] = '0.0.0.0'
+default['aps-es']['network']['bind_host'] = '127.0.0.1'
+default['aps-es']['network']['host'] = '127.0.0.1'
 default['aps-es']['network']['publish_host'] = '_non_loopback:ipv4_'
 
 # Discovery of cluster: Unicast or multicast or EC2 Discovery ?
