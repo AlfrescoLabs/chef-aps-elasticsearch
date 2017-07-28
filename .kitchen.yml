@@ -21,7 +21,6 @@ suites:
       inspec_tests:
         - name: chef-aps-inspec-elasticsearch
           git: https://github.com/Alfresco/chef-aps-inspec-elasticsearch
-          branch: TAA-1006
     attributes: {
       "name": "chef-aps-elasticsearch",
       "hostname": "chef-aps-elasticsearch-test",
