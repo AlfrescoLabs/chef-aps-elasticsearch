@@ -16,6 +16,7 @@ gem 'simplecov-rcov', '~> 0.2.3'
 gem 'yamllint', '~> 0.0.9'
 gem 'coveralls', require: false
 gem 'hitimes', '~> 1.2.5'
+gem 'molinillo', '~> 0.5.7'
 
 group :docker do
   gem 'kitchen-docker', '~> 2.6.0'

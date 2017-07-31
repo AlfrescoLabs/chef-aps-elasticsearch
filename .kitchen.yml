@@ -19,8 +19,8 @@ suites:
       - recipe[aps-elasticsearch::default]
     verifier:
       inspec_tests:
-        - name: ES-checks
-          path: test/integration/elasticsearch/inspec
+        - name: chef-aps-inspec-elasticsearch
+          git: https://github.com/Alfresco/chef-aps-inspec-elasticsearch
     attributes: {
       "name": "chef-aps-elasticsearch",
       "hostname": "chef-aps-elasticsearch-test",
